@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SpeechCoach</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div class="logo">
+            🎙️ SpeechCoach
+        </div>
+
+        <div class="status">
+            ● AI READY
+        </div>
+
+    </header>
+
+
+    <section class="hero">
+
+        <div>
+
+            <p class="tag">
+                TEXT & SPEECH ANALYSIS
+            </p>
+
+            <h1>
+                Improve the way<br>
+                <span>you speak.</span>
+            </h1>
+
+            <p class="description">
+                Practice your speech and get instant
+                insights about your speaking style,
+                vocabulary and communication.
+            </p>
+
+        </div>
+
+        <div class="mic-circle">
+
+            <div class="mic">
+                🎙️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="workspace">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="card">
+
+            <div class="card-title">
+
+                <div>
+                    <small>
+                        YOUR SPEECH
+                    </small>
+
+                    <h2>
+                        Speak naturally
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <textarea
+                id="speechText"
+                placeholder="Click Speak and start talking...">
+            </textarea>
+
+
+            <div class="buttons">
+
+                <button
+                    id="startBtn"
+                    class="speak">
+                    🎙️ Speak
+                </button>
+
+                <button
+                    id="stopBtn"
+                    class="stop">
+                    ■ Stop
+                </button>
+
+                <button
+                    id="analyzeBtn"
+                    class="analyze">
+                    ✨ Analyze
+                </button>
+
+            </div>
+
+
+            <div id="statusText"
+                 class="status-text">
+
+                ● Ready
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="card report">
+
+            <small>
+                SPEECH REPORT
+            </small>
+
+            <h2>
+                Your performance
+            </h2>
+
+
+            <div class="score">
+
+                <div class="score-number"
+                     id="score">
+                    --
+                </div>
+
+                <div>
+                    <span>
+                        SPEECH SCORE
+                    </span>
+
+                    <h3 id="scoreText">
+                        Waiting...
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div>
+                    <strong id="wordCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Words
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong id="sentenceCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Sentences
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong id="wpm">
+                        0
+                    </strong>
+
+                    <span>
+                        WPM
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong id="duration">
+                        0s
+                    </strong>
+
+                    <span>
+                        Duration
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="section">
+
+                <h3>
+                    🎭 Sentiment
+                </h3>
+
+                <div class="sentiment"
+                     id="sentiment">
+                    Waiting...
+                </div>
+
+            </div>
+
+
+            <div class="section">
+
+                <h3>
+                    ⚠️ Filler Words
+                </h3>
+
+                <div id="fillers"
+                     class="fillers">
+                    No fillers detected
+                </div>
+
+            </div>
+
+
+            <div class="section">
+
+                <h3>
+                    🔑 Keywords
+                </h3>
+
+                <div id="keywords"
+                     class="keywords">
+                    No keywords yet
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        SpeechCoach —
+        Practice • Analyze • Improve
+
+    </footer>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
